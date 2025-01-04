@@ -1,0 +1,124 @@
+
+.accordion{
+    --bs-accordion-active-bg: none;
+    --bs-accordion-btn-focus-box-shadow: none ;
+    --bs-accordion-bg:none;
+    /* backdrop-filter:blur(50px); */
+}
+.accordion-button:not(.collapsed){
+box-shadow: none;
+}
+
+
+.accordion-item{
+    border: none;
+    position: relative;
+}
+.accordion-button{
+    font-size: 2rem;
+    font-weight: 600;
+    
+    background-color: none;
+    border: none !important;
+    box-shadow: none;
+    border-bottom-color:none !important;
+    padding: 10px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+.accordion-button::after{
+    color: rgb(230, 221, 221);
+    margin-left: 10px;
+    margin-top: 5px;
+    transition: margin-top 0.3s ease-in-out;
+}
+
+.accordion-button:not(.collapsed)::after {
+    margin-top: 10px;
+}
+
+/* Hover effect for collapsed state */
+.accordion-button.collapsed:hover::after {
+    margin-top: 10px;
+}
+
+.accordion-button:not(.collapsed) + .accordion-img-div {
+    visibility: visible;
+    opacity: 1;
+    z-index: -100;
+}
+
+
+/*  _3dobjects*/
+/* _3dobjects */
+.accordion-img-div{
+    position: absolute;
+    display: block;
+    width: 250px;
+    left: -240px;
+    z-index: -1000;
+    top: -30px;
+    visibility: hidden;
+    opacity: 0;
+    /* background-color: black; */
+    transition: left 0.5s ease, opacity 0.5s ease;
+    /* visibility: visible; */
+    animation: _3dobjects cubic-bezier(0.55, 0.055, 0.675, 0.19) ease;
+}
+
+.blending-img{
+    width: 100%;
+}
+.digital-img{
+    position: absolute;
+    width: 100%;
+
+}.website-img{
+    width: 100%;
+    position: absolute;
+}
+.development-img{
+    width: 100%;
+    position: absolute;
+}
+
+.accordion-item:hover .accordion-img-div {
+    opacity: 1;
+    visibility: visible;
+}
+.accordionitem:active .accordion-img-div {
+    opacity: 1;
+    visibility: visible;
+}
+/* @keyframes _3dobjects{
+    from{
+        visibility: hidden;
+        opacity: 0;
+    }
+    to{
+        visibility: visible;
+        opacity: 1;
+    }
+} */
+.accordion-img-inner-div{
+display: none;
+
+}
+.accordion-item{
+    border: none;
+}
+@media screen and (max-width:1250px) {
+    .accordion-button{
+        font-size: 1.2rem;
+    }
+    .accordion-img-div{
+    width: 180px;
+    left: -45%;
+
+    
+    }
+}
+@media screen and (max-width:780px) {
+    .accordion-img-inner-div{
+        display: block;
+    }
+}

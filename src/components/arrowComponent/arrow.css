@@ -1,0 +1,47 @@
+.clients-container{
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center the text and icon */
+    gap: 8px;
+}
+.span-container{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+.clients-text{
+    display: inline-block !important;
+    font-size: 1.3rem;
+
+}
+.client-div{
+    display: flex;
+}
+.arrow-div svg{
+    position: relative;
+    width: 30px;
+    top: 3px;
+    left: -15px;
+    height: auto;
+    color: rgb(186, 184, 182);
+    transition: left 0.4s ease;
+}
+.client-div:hover .arrow-div svg {
+left: 0px;
+color:black ;
+
+}
+@media screen and (max-width:1250px) {
+.clients-text{
+     
+        font-size: 1rem;
+    }
+    .arrow-div svg{
+        top: 0;
+        left: -20px;
+    }
+    .client-div:hover .arrow-div svg {
+    left: -15px;
+    }
+}
